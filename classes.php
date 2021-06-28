@@ -16,25 +16,26 @@ class Product{
     public $desc;
     public $price;
     public $genre;
+    public $discount;
 
 
-    function __construct(string $name, string $desc, int $price, string $genre){
+    function __construct(string $name, string $desc, int $price, string $genre, int $discount){
         $this->name = $name;
         $this->desc = $desc;
         $this->price = $price;
         $this->genre = $genre;
-
+        $this->discount = $discount;
     }
 
 
 }
 
-$pizza = new Product("Regina", "Pizza Regina", 2.99, "food");
-$seaSalad = new Product("Re del Mare", "Insalata di Mare", 5.99, "food");
-$speaker = new Product("JBL", "Bluetooth Speaker", 16.99, "hi-tec");
-$vape = new Product("Vape", "Ammazza Zanzare", 3.99, "life-saver");
-$bandAid = new Product("Band-Aid", "Cerotti primo soccorso", 4.49, "life-saver");
-$mixer = new Product("Parkside", "Tritatutto", 14.99, "hi-tec");
+$pizza = new Product("Regina", "Pizza Regina", 2.99, "food", 5);
+$seaSalad = new Product("Re del Mare", "Insalata di Mare", 5.99, "food", 20);
+$speaker = new Product("JBL", "Bluetooth Speaker", 16.99, "hi-tec", 10);
+$vape = new Product("Vape", "Ammazza Zanzare", 3.99, "life-saver", 5);
+$bandAid = new Product("Band-Aid", "Cerotti primo soccorso", 4.49, "life-saver", 10);
+$mixer = new Product("Parkside", "Tritatutto", 14.99, "hi-tec", 15);
 
 //var_dump($pizza);
 
@@ -69,8 +70,9 @@ class Premium extends User{
 
 
 $erualdo = new Premium("Erualdo", "Benestanti", 43, true);
-$ginevra = new Premium("Ginevra", "Ramazzotti", 66, false);
+$ginevra = new Premium("Ginevra", "Ramazzotti", 66, true);
 $miranda = new Premium("Miranda", "Tartufello", 23, true);
 
+//var_dump($miranda->discount);
 
 ?>
