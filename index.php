@@ -51,13 +51,26 @@ class User{
 
     }
 
-    class Premium extends User{
-        function __construct($firstName, $lastName, $age, bool $premium){
-            parent::__construct($firstName, $lastName, $age);
-            $this->premium = $premium;
-        }
+}
+
+$mario = new User("Mario", "Rossi", 28);
+$luigi = new User("Luigi", "Bianchi", 55);
+$franco = new User("Franco", "Verdi", 77);
+$luigia = new User("Luigia", "Gialli", 17);
+
+
+
+class Premium extends User{
+    function __construct($firstName, $lastName, $age, bool $premium){
+        parent::__construct($firstName, $lastName, $age);
+        $this->premium = $premium;
     }
 }
+
+
+$erualdo = new Premium("Erualdo", "Benestanti", 43, true);
+$ginevra = new Premium("Ginevra", "Ramazzotti", 66, false);
+$miranda = new Premium("Miranda", "Tartufello", 23, true);
 
 
 ?>
